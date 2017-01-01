@@ -326,8 +326,7 @@ oScrollbar = function (themed) {
 			try {
 				this.theme.SetPartAndStateId(1, 1);
 				this.theme.DrawThemeBackground(gb, 0, 0, this.w, this.w);
-			};
-			catch (e) {
+			} catch (e) {
 				DrawPolyStar(gb, 4, 4, this.w - 8, 1, 3, 0, RGB(0, 0, 0), blendColors(this.color_txt, this.color_bg, 0.5), 0, 255);
 			};
 		} else {
@@ -345,8 +344,7 @@ oScrollbar = function (themed) {
 			try {
 				this.theme.SetPartAndStateId(1, 2);
 				this.theme.DrawThemeBackground(gb, 0, 0, this.w, this.w);
-			};
-			catch (e) {
+			} catch (e) {
 				DrawPolyStar(gb, 4, 4, this.w - 8, 1, 3, 0, blendColors(this.color_txt, this.color_bg, 0.3), blendColors(this.color_txt, this.color_bg, 0.3), 0, 255);
 			};
 		} else {
@@ -364,8 +362,7 @@ oScrollbar = function (themed) {
 			try {
 				this.theme.SetPartAndStateId(1, 3);
 				this.theme.DrawThemeBackground(gb, 0, 0, this.w, this.w);
-			};
-			catch (e) {
+			} catch (e) {
 				DrawPolyStar(gb, 4, 4, this.w - 8, 1, 3, 0, RGB(0, 0, 0), blendColors(this.color_txt, this.color_bg, 0.05), 0, 255);
 			};
 		} else {
@@ -383,8 +380,7 @@ oScrollbar = function (themed) {
 			try {
 				this.theme.SetPartAndStateId(1, 5);
 				this.theme.DrawThemeBackground(gb, 0, 0, this.w, this.w);
-			};
-			catch (e) {
+			} catch (e) {
 				DrawPolyStar(gb, 4, 4, this.w - 8, 1, 3, 0, RGB(0, 0, 0), blendColors(this.color_txt, this.color_bg, 0.5), 180, 255);
 			};
 		} else {
@@ -402,8 +398,7 @@ oScrollbar = function (themed) {
 			try {
 				this.theme.SetPartAndStateId(1, 6);
 				this.theme.DrawThemeBackground(gb, 0, 0, this.w, this.w);
-			};
-			catch (e) {
+			} catch (e) {
 				DrawPolyStar(gb, 4, 4, this.w - 8, 1, 3, 1, blendColors(this.color_txt, this.color_bg, 0.3), blendColors(this.color_txt, this.color_bg, 0.3), 180, 255);
 			};
 		} else {
@@ -421,8 +416,7 @@ oScrollbar = function (themed) {
 			try {
 				this.theme.SetPartAndStateId(1, 7);
 				this.theme.DrawThemeBackground(gb, 0, 0, this.w, this.w);
-			};
-			catch (e) {
+			} catch (e) {
 				DrawPolyStar(gb, 4, 4, this.w - 8, 1, 3, 0, RGB(0, 0, 0), blendColors(this.color_txt, this.color_bg, 0.05), 180, 255);
 			};
 		} else {
@@ -460,8 +454,7 @@ oScrollbar = function (themed) {
 					this.theme.SetPartAndStateId(9, 1);
 					this.theme.DrawThemeBackground(gb, 0, 0, this.cursorw, this.cursorh);
 				};
-			};
-			catch (e) {
+			} catch (e) {
 				gb.FillSolidRect(1, 0, this.cursorw - 2, this.cursorh, blendColors(this.color_txt, this.color_bg, 0.5));
 			};
 		} else {
@@ -482,8 +475,7 @@ oScrollbar = function (themed) {
 					this.theme.SetPartAndStateId(9, 2);
 					this.theme.DrawThemeBackground(gb, 0, 0, this.cursorw, this.cursorh);
 				};
-			};
-			catch (e) {
+			} catch (e) {
 				gb.FillSolidRect(1, 0, this.cursorw - 2, this.cursorh, blendColors(this.color_txt, this.color_bg, 0.3));
 			};
 		} else {
@@ -504,8 +496,7 @@ oScrollbar = function (themed) {
 					this.theme.SetPartAndStateId(9, 3);
 					this.theme.DrawThemeBackground(gb, 0, 0, this.cursorw, this.cursorh);
 				};
-			};
-			catch (e) {
+			} catch (e) {
 				gb.FillSolidRect(1, 0, this.cursorw - 2, this.cursorh, blendColors(this.color_txt, this.color_bg, 0.05));
 			};
 		} else {
@@ -526,8 +517,7 @@ oScrollbar = function (themed) {
 			try {
 				this.theme.SetPartAndStateId(6, 1);
 				this.theme.DrawThemeBackground(gr, this.x, this.y, this.w, this.h);
-			};
-			catch (e) {
+			} catch (e) {
 				gr.FillSolidRect(this.x, this.y, this.w, this.h, this.color_bg & 0x25ffffff);
 				gr.FillSolidRect(this.x, this.y, 1, this.h, this.color_txt & 0x05ffffff);
 			};
@@ -1111,8 +1101,7 @@ oBrowser = function (name) {
 				var tw = this.w - tx + (cScrollBar.enabled ? cScrollBar.width : 0);
 				try {
 					gr.gdiDrawText(boxText, gdi.Font(g_fname, g_fsize - 2, 1), blendColors(g_color_normal_txt, g_color_normal_bg, 0.3), tx, 0, tw, ppt.headerBarHeight - 1, DT_RIGHT | DT_VCENTER | DT_CALCRECT | DT_NOPREFIX | DT_END_ELLIPSIS);
-				};
-				catch (e) {
+				} catch (e) {
 					fb.trace(">> debug: cScrollBar.width=" + cScrollBar.width + " /boxText=" + boxText + " /ppt.headerBarHeight=" + ppt.headerBarHeight + " /g_fsize=" + g_fsize);
 				};
 			};
@@ -2278,8 +2267,7 @@ function get_font() {
 		g_fname = default_font.Name;
 		g_fsize = default_font.Size;
 		g_fstyle = default_font.Style;
-	};
-	catch (e) {
+	} catch (e) {
 		fb.trace("WSH Panel Error: Unable to use the default font. Using Arial font instead.");
 		g_fname = "arial";
 		g_fsize = 12;
