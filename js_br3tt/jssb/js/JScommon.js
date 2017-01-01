@@ -557,8 +557,7 @@ function HSL2RGB(zH, zS, zL, result) {
 		R = L * 255; //RGB results from 0 to 255
 		G = L * 255;
 		B = L * 255;
-	};
-	else {
+	} else {
 		if (L < 0.5)
 			var_2 = L * (1 + S);
 		else
@@ -619,8 +618,7 @@ function RGB2HSL(RGB_colour) {
 	if (del_Max == 0) { //This is a gray, no chroma...
 		H = 0; //HSL results from 0 to 1
 		S = 0;
-	};
-	else { //Chromatic data...
+	} else { //Chromatic data...
 		if (L < 0.5)
 			S = del_Max / (var_Max + var_Min);
 		else
@@ -659,8 +657,7 @@ function DrawColoredText(gr, text, font, default_color, x, y, w, h, alignment, f
 	var pos = text.indexOf(String.fromCharCode(3));
 	if (pos < 0) { // no specific color
 		gr.GdiDrawText(text, font, default_color, x, y, w, h, alignment | DT_CALCRECT | DT_VCENTER | DT_END_ELLIPSIS | DT_NOPREFIX);
-	};
-	else {
+	} else {
 		var tab = text.split(String.fromCharCode(3));
 		var fin = tab.length;
 
@@ -778,15 +775,13 @@ function get_system_dpi_percent() {
 		tmp = Shell.RegRead("HKEY_CURRENT_USER\\Control Panel\\Desktop\\Win8DpiScaling");
 		if (tmp == 1) {
 			tmp = Shell.RegRead("HKEY_CURRENT_USER\\Control Panel\\Desktop\\WindowMetrics\\AppliedDPI");
-		};
-		else {
+		} else {
 			//tmp = 100;
 			tmp = Shell.RegRead("HKEY_CURRENT_USER\\Control Panel\\Desktop\\WindowMetrics\\AppliedDPI");
 			if (tmp < 100)
 				tmp = 100;
 		};
-	};
-	else {
+	} else {
 		tmp = 100;
 	};
 	//tmp = Math.ceil(tmp/10)*10;
@@ -806,8 +801,7 @@ function get_system_scrollbar_height() {
 String.prototype.repeat = function (num) {
 	if (num >= 0 && num <= 5) {
 		var g = Math.round(num);
-	};
-	else {
+	} else {
 		return "";
 	};
 	return new Array(g + 1).join(this);
@@ -880,8 +874,7 @@ function formatPlaylistTotalDurationText(seconds) {
 			DURATION.seconds = DURATION.seconds - (DURATION.days * 86400);
 			if (DURATION.text.length > 0) {
 				DURATION.text = DURATION.text + " " + DURATION.days + (DURATION.days > 1 ? " days" : " day");
-			};
-			else {
+			} else {
 				DURATION.text = DURATION.days + (DURATION.days > 1 ? " days" : " day");
 			};
 		};
@@ -890,8 +883,7 @@ function formatPlaylistTotalDurationText(seconds) {
 			DURATION.seconds = DURATION.seconds - (DURATION.hours * 3600);
 			if (DURATION.text.length > 0) {
 				DURATION.text = DURATION.text + " " + DURATION.hours + (DURATION.hours > 1 ? " hours" : " hour");
-			};
-			else {
+			} else {
 				DURATION.text = DURATION.hours + (DURATION.hours > 1 ? " hours" : " hour");
 			};
 		};
@@ -904,8 +896,7 @@ function formatPlaylistTotalDurationText(seconds) {
 			};
 			if (DURATION.text.length > 0) {
 				DURATION.text = DURATION.text + " " + DURATION.minutes + (DURATION.minutes > 1 ? " minutes" : " minute");
-			};
-			else {
+			} else {
 				DURATION.text = DURATION.minutes + (DURATION.minutes > 1 ? " minutes" : " minute");
 			};
 		};
@@ -913,8 +904,7 @@ function formatPlaylistTotalDurationText(seconds) {
 			if (Math.ceil(DURATION.seconds) > 0) {
 				DURATION.text = DURATION.text + " " + Math.ceil(DURATION.seconds) + (Math.ceil(DURATION.seconds) > 1 ? " seconds" : " second");
 			};
-		};
-		else {
+		} else {
 			DURATION.text = Math.ceil(DURATION.seconds) + (Math.ceil(DURATION.seconds) > 1 ? " seconds" : " second");
 		};
 	};
@@ -928,12 +918,10 @@ function Utf8Encode(string) {
 		var c = string.charCodeAt(n);
 		if (c < 128) {
 			utftext += String.fromCharCode(c);
-		};
-		else if ((c > 127) && (c < 2048)) {
+		} else if ((c > 127) && (c < 2048)) {
 			utftext += String.fromCharCode((c >> 6) | 192);
 			utftext += String.fromCharCode((c & 63) | 128);
-		};
-		else {
+		} else {
 			utftext += String.fromCharCode((c >> 12) | 224);
 			utftext += String.fromCharCode(((c >> 6) & 63) | 128);
 			utftext += String.fromCharCode((c & 63) | 128);
@@ -972,8 +960,7 @@ function RefreshBG() {
 	if (fb.IsPlaying || fb.IsPaused) {
 		fb.RunMainMenuCommand("Playback/Play or Pause");
 		fb.RunMainMenuCommand("Playback/Play or Pause");
-	};
-	else {
+	} else {
 		fb.RunMainMenuCommand("Playback/Play");
 		fb.RunMainMenuCommand("Playback/Stop");
 	};
