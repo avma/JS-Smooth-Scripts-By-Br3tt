@@ -2,8 +2,6 @@
 // @name "JS Smooth Browser"
 // @version "20151114-1630-340"
 // @author "Br3tt aka Falstaff >> http://br3tt.deviantart.com"
-// @feature "v1.4"
-// @feature "watch-metadb"
 // @import "%fb2k_profile_path%js_br3tt\jssb\js\JScommon.js"
 // @import "%fb2k_profile_path%js_br3tt\jssb\js\JSinputbox.js"
 // ==/PREPROCESSOR==

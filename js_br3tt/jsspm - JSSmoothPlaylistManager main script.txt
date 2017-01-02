@@ -2,8 +2,6 @@
 // @name "JS Smooth Playlist Manager"
 // @version "20151115-1000-151"
 // @author "Br3tt aka Falstaff >> http://br3tt.deviantart.com"
-// @feature "v1.4"
-// @feature "watch-metadb"
 // @feature "dragdrop"
 // @import "%fb2k_profile_path%js_br3tt\jsspm\js\JScommon.js"
 // @import "%fb2k_profile_path%js_br3tt\jsspm\js\JSinputbox.js"
