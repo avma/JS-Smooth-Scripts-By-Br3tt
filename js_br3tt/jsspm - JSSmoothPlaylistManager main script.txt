@@ -2564,41 +2564,11 @@ function on_key_down(vkey) {
 					};
 					break;
 				case KMask.ctrl:
-					if (vkey == 65) { // CTRL+A
-
-					};
 					if (vkey == 66) { // CTRL+B
 						cScrollBar.enabled = !cScrollBar.enabled;
 						window.SetProperty("_DISPLAY: Show Scrollbar", cScrollBar.enabled);
 						get_metrics();
 						brw.repaint();
-					};
-					if (vkey == 88) { // CTRL+X
-
-					};
-					if (vkey == 67) { // CTRL+C
-
-					};
-					if (vkey == 86) { // CTRL+V
-
-					};
-					if (vkey == 70) { // CTRL+F
-						fb.RunMainMenuCommand("Edit/Search");
-					};
-					if (vkey == 73) { // CTRL+I
-
-					};
-					if (vkey == 78) { // CTRL+N
-						fb.RunMainMenuCommand("File/New playlist");
-					};
-					if (vkey == 79) { // CTRL+O
-						fb.RunMainMenuCommand("File/Open...");
-					};
-					if (vkey == 80) { // CTRL+P
-						fb.RunMainMenuCommand("File/Preferences");
-					};
-					if (vkey == 83) { // CTRL+S
-						fb.RunMainMenuCommand("File/Save playlist...");
 					};
 					if (vkey == 84) { // CTRL+T
 						ppt.showHeaderBar = !ppt.showHeaderBar;
@@ -2625,13 +2595,6 @@ function on_key_down(vkey) {
 					};
 					break;
 				case KMask.alt:
-					switch (vkey) {
-					case 65: // ALT+A
-						fb.RunMainMenuCommand("View/Always on Top");
-						break;
-					case VK_ALT: // ALT key alone
-						break;
-					};
 					break;
 				};
 			};
