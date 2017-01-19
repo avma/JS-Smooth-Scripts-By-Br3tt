@@ -71,7 +71,7 @@ ppt = {
 	botTextRowHeight: 0,
 	default_textLineHeight: 10,
 	textLineHeight: 0,
-	rawBitmap: false,
+	rawBitmap: false
 };
 
 cTouch = {
