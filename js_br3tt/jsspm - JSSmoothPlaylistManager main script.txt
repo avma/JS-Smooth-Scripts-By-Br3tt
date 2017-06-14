@@ -1796,7 +1796,6 @@ var g_dragndrop_targetPlaylistId = -1;
 //
 var ww = 0, wh = 0;
 var g_metadb = null;
-var g_focus = false;
 var foo_playcount = utils.CheckComponent("foo_playcount", true);
 clipboard = {
 	selection: null
@@ -2689,8 +2688,6 @@ function on_item_selection_change() {};
 function on_playlist_items_selection_change() {};
 
 function on_focus(is_focused) {
-	g_focus = is_focused;
-
 	if (brw.inputboxID >= 0) {
 		brw.inputbox.on_focus(is_focused);
 	};

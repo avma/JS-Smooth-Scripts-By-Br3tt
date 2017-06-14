@@ -3130,7 +3130,6 @@ var g_font_wingdings2_found = utils.CheckFont("wingdings 2");
 //
 var ww = 0, wh = 0;
 var g_metadb = null;
-var g_focus = false;
 var foo_playcount = utils.CheckComponent("foo_playcount", true);
 clipboard = {
 	selection: null
@@ -4165,8 +4164,6 @@ function on_playlist_items_selection_change() {
 };
 
 function on_focus(is_focused) {
-	g_focus = is_focused;
-
 	if (!is_focused) {
 		brw.repaint();
 	};
